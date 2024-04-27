@@ -17,14 +17,25 @@ public class App {
 
         notes.remove(2);
         System.out.println(notes.size());
-        /*
-        for (notes note:notes){
-            double sum=0;
-            sum += notes.get();
-            double avg=sum/notes.size();
-            System.out.println("la moyenne est :"+avg );
+
+        double sum=0;
+        double max =0;
+        double min =100000;
+        for (Map.Entry<String,Double>entry: notes.entrySet()){
+
+
+            if (entry.getValue()>max)
+                max= entry.getValue();
+
+            if (entry.getValue()<min)
+                min= entry.getValue();
+            sum += entry.getValue();
+
         }
-        */
+        double avg=sum/notes.size();
+        System.out.println("la moyenne est :"+avg );
+        System.out.println("le max est :"+max );
+        System.out.println("le min est :"+min );
         notes.containsValue(20);
 
     }
