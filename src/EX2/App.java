@@ -36,7 +36,16 @@ public class App {
         System.out.println("la moyenne est :"+avg );
         System.out.println("le max est :"+max );
         System.out.println("le min est :"+min );
+
         notes.containsValue(20);
 
+
+
+
+    }
+    public void iterateUsingLambda(Map<String, Double> notes) {
+        notes.forEach((key, value) -> {
+            System.out.println("Key=" + key + ", Value=" + value);
+        });
     }
 }
